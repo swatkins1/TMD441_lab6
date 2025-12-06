@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sunrise and Sunset Times</title>
   <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="normalize.css" />
     <script src="script.js"></script>
 </head>
 
@@ -12,7 +13,7 @@
   <header class="site-header"> 
   
   <h1>Sunrise and Sunset Times</h1>
-    <p class="subtitle">Pick a place or enter coordinates to see today and tomorrow's sun times!</p
+    <p class="subtitle">Pick a place or enter coordinates to see today and tomorrow's sun times!</p>
   
   </header>
 
@@ -25,6 +26,110 @@
   <main class="container">
    
    
+    <section class="controls card">
+      <h2>Choose A Location</h2>
+
+      <label for="preset">Select A City?</label>
+      <select id="preset" aria-label="Preset locations">
+        
+  
+		<option data-lat="37.5660"   data-long="126.9784">Seoul, South Korea</option>
+		<option data-lat="-21.6978"  data-long="21.6458">Ghanzi, Botswana</option>
+		<option data-lat="39.0997"   data-long="-94.5786">Kansas City, USA</option>
+		<option data-lat="35.6895"   data-long="139.6917">Tokyo, Japan</option>
+		<option data-lat="-33.8679"  data-long="151.2070">Sydney, Australia</option>
+		<option data-lat="48.8534"   data-long="2.3488">Paris, France</option>
+		<option data-lat="55.7522"   data-long="37.6156">Moscow, Russia</option>
+		<option data-lat="19.4285"   data-long="-99.1277">Mexico City, Mexico</option>
+		<option data-lat="3.4505"    data-long="-76.5346">Cali, Colombia</option>
+		<option data-lat="41.85"     data-long="-87.65">Chicago, USA</option>
+
+      </select>
+
+      <div class="or">Or perhaps enter custom coordinates?</div>
+      <div class="coords">
+        <label>
+          Latitude
+          <input id="lat" type="number" step="any" placeholder="e.g. 20.47">
+        </label>
+        <label>
+          Longitude
+          <input id="long" type="number" step="any" placeholder="e.g. -67.69">
+        </label>
+      </div>
+
+      <div class="actions">
+        <button id="fetchBtn">Get Your Sun Times</button>
+        <button id="clearBtn" class="muted">Clear</button>
+      </div>
+
+      <p class="credit">Powered by <a href="https://sunrisesunset.io" target="_blank" rel="noopener">SunriseSunset.io</a></p>
+    </section>
+
+    <section id="dashboard" class="dashboard card">
+  
+  
+      <div class="placeholder" id="placeholder">
+	  
+	  
+	  
+	  
+	  
+	  <img src="url" alt="alternatetext">
+    <img src="url" alt="alternatetext">
+	  
+       
+  
+
+  </div>
+
+      <div id="results" class="results hidden">
+        <header class="results-header">
+          <div>
+            <h3 id="locationName">—</h3>
+            <div id="tz" class="tz">Timezone: ¯\_(ツ)_/¯ </div>
+          </div>
+          <div id="lastUpdated" class="small muted">—</div>
+        </header>
+
+        <div class="grid">
+         
+		 
+          <div class="day-card">
+            <h4>Today</h4>
+            <dl>
+			
+			  <dt>Day Length</dt><dd id="today-length">—</dd>
+			  <dt>Dawn</dt><dd id="today-dawn">—</dd>
+              <dt>Sunrise</dt><dd id="today-sunrise">—</dd>
+              <dt>Sunset</dt><dd id="today-sunset">—</dd>
+              <dt>Dusk</dt><dd id="today-dusk">—</dd>
+             
+            </dl>
+          </div>
+
+          <div class="day-card">
+            <h4>Tomorrow</h4>
+            <dl>
+			
+			  <dt>Day Length</dt><dd id="tom-length">—</dd>
+			  <dt>Dawn</dt><dd id="tom-dawn">—</dd>
+              <dt>Sunrise</dt><dd id="tom-sunrise">—</dd>
+              <dt>Sunset</dt><dd id="tom-sunset">—</dd>
+              <dt>Dusk</dt><dd id="tom-dusk">—</dd>
+           
+            
+            </dl>
+          </div>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+      </div>
+
+      <img src="url" alt="alternatetext">
+      <img src="url" alt="alternatetext">
+
+    </section>
    
    
    
