@@ -22,13 +22,11 @@ const ids = {
   'today-sunset': document.getElementById('today-sunset'),
   'today-dawn': document.getElementById('today-dawn'),
   'today-dusk': document.getElementById('today-dusk'),
-  'today-noon': document.getElementById('today-noon'),
   'today-length': document.getElementById('today-length'),
   'tom-sunrise': document.getElementById('tom-sunrise'),
   'tom-sunset': document.getElementById('tom-sunset'),
   'tom-dawn': document.getElementById('tom-dawn'),
   'tom-dusk': document.getElementById('tom-dusk'),
-  'tom-noon': document.getElementById('tom-noon'),
   'tom-length': document.getElementById('tom-length'),
 };
 
@@ -94,7 +92,6 @@ function populate(dayKey, data) {
   ids[`${prefix}-sunset`].textContent = data.sunset ?? '—';
   ids[`${prefix}-dawn`].textContent = data.dawn ?? '—';
   ids[`${prefix}-dusk`].textContent = data.dusk ?? '—';
-  ids[`${prefix}-noon`].textContent = data.solar_noon ?? '—';
   ids[`${prefix}-length`].textContent = data.day_length ?? '—';
 }
 
