@@ -21,6 +21,7 @@ const ids = {
   'today-length': document.getElementById('today-length'),
   'today-dawn': document.getElementById('today-dawn'),
   'today-sunrise': document.getElementById('today-sunrise'),
+  'today-noon': document.getElementById('today-noon'),
   'today-sunset': document.getElementById('today-sunset'),
   'today-dusk': document.getElementById('today-dusk'),
 
@@ -28,6 +29,7 @@ const ids = {
   'tom-length': document.getElementById('tom-length'),
   'tom-dawn': document.getElementById('tom-dawn'),
   'tom-sunrise': document.getElementById('tom-sunrise'),
+  'tom-noon': document.getElementById('tom-noon'),
   'tom-sunset': document.getElementById('tom-sunset'),
   'tom-dusk': document.getElementById('tom-dusk'),
   
@@ -94,6 +96,7 @@ function populate(dayKey, data) {
   ids[`${prefix}-length`].textContent = data.day_length ?? '—';
   ids[`${prefix}-dawn`].textContent = data.dawn ?? '—';
   ids[`${prefix}-sunrise`].textContent = data.sunrise ?? '—';
+  ids[`${prefix}-noon`].textContent = data.solar_noon ?? '—';
   ids[`${prefix}-sunset`].textContent = data.sunset ?? '—';
   ids[`${prefix}-dusk`].textContent = data.dusk ?? '—';
 
