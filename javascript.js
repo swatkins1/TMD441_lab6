@@ -18,16 +18,19 @@ const errorBox = document.getElementById('error');
 
 
 const ids = {
+  'today-length': document.getElementById('today-length'),
+  'today-dawn': document.getElementById('today-dawn'),
   'today-sunrise': document.getElementById('today-sunrise'),
   'today-sunset': document.getElementById('today-sunset'),
-  'today-dawn': document.getElementById('today-dawn'),
   'today-dusk': document.getElementById('today-dusk'),
-  'today-length': document.getElementById('today-length'),
+
+  
+  'tom-length': document.getElementById('tom-length'),
+  'tom-dawn': document.getElementById('tom-dawn'),
   'tom-sunrise': document.getElementById('tom-sunrise'),
   'tom-sunset': document.getElementById('tom-sunset'),
-  'tom-dawn': document.getElementById('tom-dawn'),
   'tom-dusk': document.getElementById('tom-dusk'),
-  'tom-length': document.getElementById('tom-length'),
+  
 };
 
 
@@ -88,11 +91,12 @@ function apiUrl(lat, lng, date) {
 function populate(dayKey, data) {
 
   const prefix = dayKey === 'today' ? 'today' : 'tom';
+  ids[`${prefix}-length`].textContent = data.day_length ?? '—';
+  ids[`${prefix}-dawn`].textContent = data.dawn ?? '—';
   ids[`${prefix}-sunrise`].textContent = data.sunrise ?? '—';
   ids[`${prefix}-sunset`].textContent = data.sunset ?? '—';
-  ids[`${prefix}-dawn`].textContent = data.dawn ?? '—';
   ids[`${prefix}-dusk`].textContent = data.dusk ?? '—';
-  ids[`${prefix}-length`].textContent = data.day_length ?? '—';
+
 }
 
 function showResultsArea() {
