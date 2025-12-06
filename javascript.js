@@ -161,6 +161,7 @@ async function fetchAndDisplay() {
 
 
 
+
 fetchBtn.addEventListener('click', async (e) => {
   e.preventDefault();
   
@@ -184,3 +185,4 @@ clearBtn.addEventListener('click', (e) => {
   resultsArea.classList.add('hidden');
   clearError();
 });
+
