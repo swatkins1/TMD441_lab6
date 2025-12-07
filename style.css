@@ -1,25 +1,20 @@
-:root {
-
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-}
-
 /* Base */
 * {
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   height: 100%;
+  background: linear-gradient(180deg, #9521b3 0%, #e3e725 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body {
+  background: transparent;
   margin: 0;
   padding: 24px;
-  background: linear-gradient(180deg, #9521b3 0%, #e3e725 100%);
   color: #80a0e5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Header */
@@ -31,6 +26,7 @@ body {
 .site-header h1 {
   margin: 0;
   font-size: 1.6rem;
+  font-family: "Ribeye", cursive;
 }
 
 .subtitle {
@@ -42,10 +38,9 @@ body {
 /* Layout */
 .container {
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 1fr;
   gap: 18px;
-  align-items: start;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -55,9 +50,16 @@ body {
   padding: 18px;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(57, 108, 210, 0.06);
+  text-align: center;
+  border: 3px solid #6a0dad;
 }
 
 /* Controls */
+.controls {
+  text-align: center;
+  border: 3px solid #6a0dad;
+}
+
 .controls label {
   display: block;
   margin-top: 12px;
@@ -86,6 +88,7 @@ body {
 .coords {
   display: flex;
   gap: 8px;
+  justify-content: center;
 }
 
 .coords label {
@@ -96,6 +99,7 @@ body {
   display: flex;
   gap: 8px;
   margin-top: 12px;
+  justify-content: center;
 }
 
 button {
@@ -124,6 +128,8 @@ button:active {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  border: 3px solid #6a0dad;
+  border-radius: 12px;
 }
 
 .placeholder {
@@ -132,12 +138,14 @@ button:active {
   justify-content: center;
   height: 100%;
   color: #d22bd5;
+  text-align: center;
 }
 
 .placeholder img {
   max-width: 320px;
   border-radius: 10px;
   box-shadow: 0 6px 12px #ae42a0;
+  border: 3px solid #6a0dad;
 }
 
 .results.hidden {
@@ -146,8 +154,10 @@ button:active {
 
 .results-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 6px;
   margin-bottom: 6px;
 }
 
@@ -173,7 +183,8 @@ button:active {
 .day-card {
   padding: 12px;
   min-height: 220px;
-  border-radius: 10px;
+  border-radius: 12px;
+  border: 2px solid #8c1197;
   background: linear-gradient(180deg, rgba(58, 9, 100, 0.03), rgba(255, 255, 255, 0));
 }
 
@@ -187,6 +198,8 @@ button:active {
   column-gap: 8px;
   row-gap: 8px;
   align-items: center;
+  justify-items: center;
+  text-align: center;
 }
 
 .day-card dt {
@@ -226,33 +239,46 @@ button:active {
   color: #901986;
 }
 
-
-
-
-
-
-
-
-
+/* Sunset Gallery */
 .sunset-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 12px;
-  max-width: 600px;
+  justify-content: center;
+  max-width: 900px;
   margin: 20px auto;
 }
 
 .sunset-gallery img {
-  width: 100%;
-  height: auto;
+  width: calc(50% - 12px);
   border-radius: 10px;
+  border: 3px solid #6a0dad;
 }
 
+/* Title Box */
+.title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 3px solid #6a0dad;
+  border-radius: 12px;
+  background: rgb(213, 38, 38);
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr;  
-  gap: 18px;
-  max-width: 800px; 
-  margin: 0 auto;
+.title-box:hover {
+  background: #6a0dad;
+  border-color: #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.title-box:hover h1,
+.title-box:hover .subtitle {
+  color: #ffffff;
 }
