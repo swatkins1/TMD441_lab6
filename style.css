@@ -1,4 +1,4 @@
-
+/* Base */
 * {
   box-sizing: border-box;
 }
@@ -10,7 +10,6 @@ html {
   background-attachment: fixed;
 }
 
-
 body {
   background: transparent;
   margin: 0;
@@ -19,7 +18,7 @@ body {
   font-family: "Times New Roman", serif;
 
 }
-
+/* Header */
 .site-header {
   text-align: center;
   margin-bottom: 18px;
@@ -37,7 +36,7 @@ body {
   font-size: 0.95rem;
 }
 
-
+/* Layout */
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -45,7 +44,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
 }
-
+/* Cards */
 .card {
   background: #ffbf36;
   padding: 18px;
@@ -55,7 +54,7 @@ body {
   border: 3px solid #ec7114;
 }
 
-
+/* Controls */
 .controls {
   text-align: center;
   border: 3px solid #6a0dad;
@@ -244,7 +243,7 @@ button:active {
   color: #901986;
 }
 
-
+/* Sunset Gallery */
 .sunset-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -260,7 +259,7 @@ button:active {
   border: 3px solid #6a0dad;
 }
 
-
+/* Title Box */
 .title-box {
   display: flex;
   flex-direction: column;
