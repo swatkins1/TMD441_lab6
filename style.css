@@ -22,7 +22,7 @@ body {
 body {
   margin: 0;
   padding: 24px;
-  background: linear-gradient(180deg, #6aa8e7 0%, var(--bg) 100%);
+  background: linear-gradient(180deg, #6aa8e7 0%, #e6e7eb 100%);
   color: #80a0e5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,7 +41,7 @@ body {
 
 .subtitle {
   margin: 6px 0 0;
-  color: var(--muted);
+  color: #e6e7eb;
   font-size: 0.95rem;
 }
 
@@ -57,7 +57,7 @@ body {
 
 /* Cards */
 .card {
-  background: var(--card);
+  background: #e6e7eb;
   padding: 18px;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(57, 108, 210, 0.06);
@@ -85,7 +85,7 @@ body {
 .or {
   margin: 10px 0;
   text-align: center;
-  color: var(--muted);
+  color: #e6e7eb;
   font-size: 0.85rem;
 }
 
@@ -109,14 +109,14 @@ button {
   border: 0;
   border-radius: 10px;
   font-weight: 600;
-  background: var(--accent);
+  background: #e6e7eb;
   color: white;
   cursor: pointer;
 }
 
 button.muted {
   background: transparent;
-  color: var(--muted);
+  color: #e6e7eb;
   border: 1px solid #e6e7eb;
 }
 
@@ -137,13 +137,13 @@ button:active {
   align-items: center;
   justify-content: center;
   height: 100%;
-  color: var(--muted);
+  color: #e6e7eb;
 }
 
 .placeholder img {
   max-width: 320px;
   border-radius: 10px;
-  box-shadow: 0 6px 12px var(--glass);
+  box-shadow: 0 6px 12px #e6e7eb;
 }
 
 .results.hidden {
@@ -166,7 +166,7 @@ button:active {
 }
 
 .muted {
-  color: var(--muted);
+  color: #e6e7eb;
 }
 
 .grid {
@@ -196,7 +196,7 @@ button:active {
 }
 
 .day-card dt {
-  color: var(--muted);
+  color: #e6e7eb;
   font-size: 0.9rem;
 }
 
@@ -209,25 +209,25 @@ button:active {
   margin-top: 12px;
   padding: 10px;
   border-radius: 8px;
-  color: var(--danger);
+  color: #e6e7eb;
   background: rgba(239, 68, 68, 0.08);
   border: 1px solid rgba(239, 68, 68, 0.15);
 }
 
 .tz {
   font-size: 0.95rem;
-  color: var(--muted);
+  color: #e6e7eb;
 }
 
 .credit {
   margin-top: 12px;
   font-size: 0.85rem;
-  color: var(--muted);
+  color: #e6e7eb;
 }
 
 .site-footer {
   max-width: 1200px;
   margin: 18px auto 0;
   text-align: center;
-  color: var(--muted);
+  color: #e6e7eb;
 }
