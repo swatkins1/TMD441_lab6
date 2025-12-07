@@ -1,10 +1,4 @@
 :root {
-  --bg: #45f42a;
-  --card: #690fde;
-  --muted: #b50fe8;
-  --accent: #08d4b2;
-  --danger: #e32fad;
-  --glass: rgba(221, 73, 73, 0.04);
 
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
@@ -22,7 +16,7 @@ body {
 body {
   margin: 0;
   padding: 24px;
-  background: linear-gradient(180deg, #6aa8e7 0%, #e6e7eb 100%);
+  background: linear-gradient(180deg, #9521b3 0%, #e3e725 100%);
   color: #80a0e5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,7 +35,7 @@ body {
 
 .subtitle {
   margin: 6px 0 0;
-  color: #e6e7eb;
+  color: #1bebb3;
   font-size: 0.95rem;
 }
 
@@ -76,7 +70,7 @@ body {
   width: 100%;
   margin-top: 6px;
   padding: 8px 10px;
-  border: 1px solid #e6e7eb;
+  border: 1px solid #0e9b38;
   border-radius: 8px;
   font-size: 0.95rem;
   background: white;
@@ -85,7 +79,7 @@ body {
 .or {
   margin: 10px 0;
   text-align: center;
-  color: #e6e7eb;
+  color: #21d2b8;
   font-size: 0.85rem;
 }
 
@@ -109,15 +103,15 @@ button {
   border: 0;
   border-radius: 10px;
   font-weight: 600;
-  background: #e6e7eb;
+  background: #8c1197;
   color: white;
   cursor: pointer;
 }
 
 button.muted {
   background: transparent;
-  color: #e6e7eb;
-  border: 1px solid #e6e7eb;
+  color: #33bc47;
+  border: 1px solid #6ed118;
 }
 
 button:active {
@@ -137,13 +131,13 @@ button:active {
   align-items: center;
   justify-content: center;
   height: 100%;
-  color: #e6e7eb;
+  color: #d22bd5;
 }
 
 .placeholder img {
   max-width: 320px;
   border-radius: 10px;
-  box-shadow: 0 6px 12px #e6e7eb;
+  box-shadow: 0 6px 12px #ae42a0;
 }
 
 .results.hidden {
@@ -166,7 +160,7 @@ button:active {
 }
 
 .muted {
-  color: #e6e7eb;
+  color: #21a63b;
 }
 
 .grid {
@@ -180,7 +174,7 @@ button:active {
   padding: 12px;
   min-height: 220px;
   border-radius: 10px;
-  background: linear-gradient(180deg, rgba(37, 99, 235, 0.03), rgba(255, 255, 255, 0));
+  background: linear-gradient(180deg, rgba(58, 9, 100, 0.03), rgba(255, 255, 255, 0));
 }
 
 .day-card h4 {
@@ -196,7 +190,7 @@ button:active {
 }
 
 .day-card dt {
-  color: #e6e7eb;
+  color: #4bbd1a;
   font-size: 0.9rem;
 }
 
@@ -209,28 +203,35 @@ button:active {
   margin-top: 12px;
   padding: 10px;
   border-radius: 8px;
-  color: #e6e7eb;
+  color: #de0fcd;
   background: rgba(239, 68, 68, 0.08);
   border: 1px solid rgba(239, 68, 68, 0.15);
 }
 
 .tz {
   font-size: 0.95rem;
-  color: #e6e7eb;
+  color: #610e7a;
 }
 
 .credit {
   margin-top: 12px;
   font-size: 0.85rem;
-  color: #e6e7eb;
+  color: #44bdad;
 }
 
 .site-footer {
   max-width: 1200px;
   margin: 18px auto 0;
   text-align: center;
-  color: #e6e7eb;
+  color: #901986;
 }
+
+
+
+
+
+
+
 
 
 .sunset-gallery {
