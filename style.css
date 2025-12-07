@@ -1,11 +1,11 @@
-/* Base */
+
 * {
   box-sizing: border-box;
 }
 
 html {
   height: 100%;
-  background: linear-gradient(180deg, #9521b3 0%, #e3e725 100%);
+  background: linear-gradient(180deg, #9521b3 0%, #f0b520 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -14,10 +14,11 @@ body {
   background: transparent;
   margin: 0;
   padding: 24px;
-  color: #80a0e5;
+  color: #500632;
+  font-family: "Times New Roman", serif;
+
 }
 
-/* Header */
 .site-header {
   text-align: center;
   margin-bottom: 18px;
@@ -31,11 +32,11 @@ body {
 
 .subtitle {
   margin: 6px 0 0;
-  color: #1bebb3;
+  color: #380a3d;
   font-size: 0.95rem;
 }
 
-/* Layout */
+
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -44,17 +45,16 @@ body {
   margin: 0 auto;
 }
 
-/* Cards */
 .card {
-  background: #e6e7eb;
+  background: #ffbf36;
   padding: 18px;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(57, 108, 210, 0.06);
   text-align: center;
-  border: 3px solid #6a0dad;
+  border: 3px solid #ec7114;
 }
 
-/* Controls */
+
 .controls {
   text-align: center;
   border: 3px solid #6a0dad;
@@ -72,16 +72,18 @@ body {
   width: 100%;
   margin-top: 6px;
   padding: 8px 10px;
-  border: 1px solid #0e9b38;
+  border: 1px solid #025a2e;
   border-radius: 8px;
   font-size: 0.95rem;
-  background: white;
+  background: rgb(255, 234, 253);
 }
+
+
 
 .or {
   margin: 10px 0;
   text-align: center;
-  color: #21d2b8;
+  color: #006051;
   font-size: 0.85rem;
 }
 
@@ -114,8 +116,8 @@ button {
 
 button.muted {
   background: transparent;
-  color: #33bc47;
-  border: 1px solid #6ed118;
+  color: #00620f;
+  border: 1px solid #1f4200;
 }
 
 button:active {
@@ -128,7 +130,7 @@ button:active {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  border: 3px solid #6a0dad;
+  border: 3px solid #f30061;
   border-radius: 12px;
 }
 
@@ -163,6 +165,8 @@ button:active {
 
 .results-header h3 {
   margin: 0;
+  font-family: "Oldenburg", serif;
+
 }
 
 .small {
@@ -170,7 +174,7 @@ button:active {
 }
 
 .muted {
-  color: #21a63b;
+  color: #04280b;
 }
 
 .grid {
@@ -203,7 +207,7 @@ button:active {
 }
 
 .day-card dt {
-  color: #4bbd1a;
+  color: #0d2b00;
   font-size: 0.9rem;
 }
 
@@ -229,7 +233,7 @@ button:active {
 .credit {
   margin-top: 12px;
   font-size: 0.85rem;
-  color: #44bdad;
+  color: #00cdb1;
 }
 
 .site-footer {
@@ -239,7 +243,7 @@ button:active {
   color: #901986;
 }
 
-/* Sunset Gallery */
+
 .sunset-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -255,7 +259,7 @@ button:active {
   border: 3px solid #6a0dad;
 }
 
-/* Title Box */
+
 .title-box {
   display: flex;
   flex-direction: column;
@@ -270,15 +274,18 @@ button:active {
   text-align: center;
 }
 
+
 .title-box:hover {
   background: #6a0dad;
-  border-color: #ffffff;
-  color: #ffffff;
+  border-color: #fff389;
+  color: #ffef72;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
 .title-box:hover h1,
 .title-box:hover .subtitle {
-  color: #ffffff;
+  color: #f6d68c;
+  transition: 0.3s ease-in-out;
 }
+
