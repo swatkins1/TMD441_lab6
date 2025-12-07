@@ -4,59 +4,38 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sunrise and Sunset Times</title>
+
   <link rel="stylesheet" href="style.css" />
-   <link rel="stylesheet" href="normalize.css" />
-   
-   
-   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="normalize.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oldenburg&family=Ribeye&display=swap" rel="stylesheet">
 
-
-
-	<script src="js/script.js" defer></script>
-
-	
+  <script src="js/script.js" defer></script>
 </head>
-
 <body>
-  <header class="site-header"> 
-  
-  <h1>Sunrise and Sunset  </h1>
+  <header class="site-header">
+    <h1>Sunrise and Sunset</h1>
     <p class="subtitle">Pick a place or enter coordinates to see today and tomorrow's sun times!</p>
-  
   </header>
-
-
-
-
-
-
-
   <main class="container">
-   
-   
     <section class="controls card">
       <h2>Choose A Location</h2>
-
       <label for="preset">Select A City?</label>
       <select id="preset" aria-label="Preset locations">
-        
- 
         <option value="">-*- Select a City -*-</option>
-		<option data-lat="37.5660"   data-lng="126.9784">Seoul, South Korea</option>
-		<option data-lat="-21.6978"  data-lng="21.6458">Ghanzi, Botswana</option>
-		<option data-lat="39.0997"   data-lng="-94.5786">Kansas City, USA</option>
-		<option data-lat="35.6895"   data-lng="139.6917">Tokyo, Japan</option>
-		<option data-lat="-33.8679"  data-lng="151.2070">Sydney, Australia</option>
-		<option data-lat="48.8534"   data-lng="2.3488">Paris, France</option>
-		<option data-lat="55.7522"   data-lng="37.6156">Moscow, Russia</option>
-		<option data-lat="19.4285"   data-lng="-99.1277">Mexico City, Mexico</option>
-		<option data-lat="3.4505"    data-lng="-76.5346">Cali, Colombia</option>
-		<option data-lat="41.85"     data-lng="-87.65">Chicago, USA</option>
-
+        <option data-lat="37.5660" data-lng="126.9784">Seoul, South Korea</option>
+        <option data-lat="-21.6978" data-lng="21.6458">Ghanzi, Botswana</option>
+        <option data-lat="39.0997" data-lng="-94.5786">Kansas City, USA</option>
+        <option data-lat="35.6895" data-lng="139.6917">Tokyo, Japan</option>
+        <option data-lat="-33.8679" data-lng="151.2070">Sydney, Australia</option>
+        <option data-lat="48.8534" data-lng="2.3488">Paris, France</option>
+        <option data-lat="55.7522" data-lng="37.6156">Moscow, Russia</option>
+        <option data-lat="19.4285" data-lng="-99.1277">Mexico City, Mexico</option>
+        <option data-lat="3.4505" data-lng="-76.5346">Cali, Colombia</option>
+        <option data-lat="41.85" data-lng="-87.65">Chicago, USA</option>
       </select>
-
       <div class="or">Or perhaps enter custom coordinates?</div>
       <div class="coords">
         <label>
@@ -68,29 +47,17 @@
           <input id="lng" type="number" step="any" placeholder="e.g. -67.69">
         </label>
       </div>
-
       <div class="actions">
         <button id="fetchBtn">Get Your Sun Times</button>
         <button id="clearBtn" class="muted">Clear</button>
       </div>
-
-      <p class="credit">Powered by <a href="https://sunrisesunset.io" target="_blank" rel="noopener">SunriseSunset.io</a></p>
+      <p class="credit">
+        Powered by
+        <a href="https://sunrisesunset.io" target="_blank" rel="noopener">SunriseSunset.io</a>
+      </p>
     </section>
-
     <section id="dashboard" class="dashboard card">
-  
-  
-      <div class="placeholder" id="placeholder">
-	  
-	  
-	  
-	  
-
-       
-  
-
-  </div>
-
+      <div class="placeholder" id="placeholder"></div>
       <div id="results" class="results hidden">
         <header class="results-header">
           <div>
@@ -99,67 +66,46 @@
           </div>
           <div id="lastUpdated" class="small muted">—</div>
         </header>
-
         <div class="grid">
-         
-		 
           <div class="day-card">
             <h4>Today</h4>
             <dl>
-			
-			  <dt>Day Length</dt><dd id="today-length"> ¯\_(ツ)_/¯ </dd>
-			  <dt>Dawn</dt><dd id="today-dawn"> ¯\_(ツ)_/¯</dd>
-              <dt>Sunrise</dt><dd id="today-sunrise"> ¯\_(ツ)_/¯ </dd>
-			  <dt>Noon</dt><dd id="today-noon"> ¯\_(ツ)_/¯ </dd>
-              <dt>Sunset</dt><dd id="today-sunset"> ¯\_(ツ)_/¯ </dd>
-              <dt>Dusk</dt><dd id="today-dusk"> ¯\_(ツ)_/¯ </dd>
-             
+              <dt>Day Length</dt> <dd id="today-length">¯\_(ツ)_/¯</dd>
+              <dt>Dawn</dt> <dd id="today-dawn">¯\_(ツ)_/¯</dd>
+              <dt>Sunrise</dt> <dd id="today-sunrise">¯\_(ツ)_/¯</dd>
+              <dt>Noon</dt> <dd id="today-noon">¯\_(ツ)_/¯</dd>
+              <dt>Sunset</dt> <dd id="today-sunset">¯\_(ツ)_/¯</dd>
+              <dt>Dusk</dt> <dd id="today-dusk">¯\_(ツ)_/¯</dd>
             </dl>
           </div>
-
           <div class="day-card">
             <h4>Tomorrow</h4>
             <dl>
-			
-			
-			  <dt>Day Length</dt><dd id="tom-length"> ¯\_(ツ)_/¯ </dd>
-			  <dt>Dawn</dt><dd id="tom-dawn">  ¯\_(ツ)_/¯ </dd>
-              <dt>Sunrise</dt><dd id="tom-sunrise">  ¯\_(ツ)_/¯ </dd>
-			  <dt>Noon</dt><dd id="tom-noon">  ¯\_(ツ)_/¯ </dd>
-              <dt>Sunset</dt><dd id="tom-sunset">   ¯\_(ツ)_/¯ </dd>
-              <dt>Dusk</dt><dd id="tom-dusk">  ¯\_(ツ)_/¯ </dd>
-           
-            
+              <dt>Day Length</dt> <dd id="tom-length">¯\_(ツ)_/¯</dd>
+              <dt>Dawn</dt> <dd id="tom-dawn">¯\_(ツ)_/¯</dd>
+              <dt>Sunrise</dt> <dd id="tom-sunrise">¯\_(ツ)_/¯</dd>
+              <dt>Noon</dt> <dd id="tom-noon">¯\_(ツ)_/¯</dd>
+              <dt>Sunset</dt> <dd id="tom-sunset">¯\_(ツ)_/¯</dd>
+              <dt>Dusk</dt> <dd id="tom-dusk">¯\_(ツ)_/¯</dd>
             </dl>
           </div>
         </div>
-
         <div id="error" class="error hidden"></div>
       </div>
-
-     
     </section>
-   
-   
-   
-   <div class="sunset-gallery">
-  <img src="images/sunset1.jpeg" alt="sunset1">
-  <img src="images/sunset2.jpeg" alt="sunset2">
-  <img src="images/sunset3.jpeg" alt="sunset3">
-  <img src="images/sunset4.jpeg" alt="sunset4">
-</div>
-
-   
+    <div class="sunset-gallery">
+      <img src="images/sunset1.jpeg" alt="sunset taken at the metra Lassale Street stop (Near IIT Campus)">
+      <img src="images/sunset2.jpeg" alt="sunset taken at the metra Lassale Street stop (Near IIT Campus)">
+      <img src="images/sunset3.jpeg" alt="sunset taken at the metra Lassale Street stop (Near IIT Campus)">
+      <img src="images/sunset4.jpeg" alt="sunset taken at the metra Lassale Street stop (Near IIT Campus)">
+    </div>
   </main>
-
   <footer class="site-footer">
-   <p>Watkins_S --> credit to <a href="https://sunrisesunset.io" target="_blank" rel="noopener">SunriseSunset.io</a> for the API.</p>
+    <p>
+      Watkins_S --> credit to
+      <a href="https://sunrisesunset.io" target="_blank" rel="noopener">SunriseSunset.io</a>
+      for the API.
+    </p>
   </footer>
-  
-  
-
-
-
-
 </body>
 </html>
